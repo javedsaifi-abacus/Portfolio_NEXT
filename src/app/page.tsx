@@ -4,6 +4,7 @@ import Header from "../app/components/Header";
 import Section from "../app/Section/page";
 import ContactForm from "../app/components/ContactForm";
 import Navbar from "../app/components/Navbar";
+
 // import "../styles/globals.css"; // Import global styles
 
 export default function Home() {
