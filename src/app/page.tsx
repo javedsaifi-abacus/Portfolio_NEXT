@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <section>
       <h1>Welcome to My Portfolio</h1>
-      <p>Hello! I'm Javed Saifi, a web developer passionate about building responsive and dynamic websites.</p>
+      {/* <p>Hello! I'm Javed Saifi, a web developer passionate about building responsive and dynamic websites.</p> */}
     </section>
   );
 }
