@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Javed Saifi's Portfolio</title>
+        <title>Javed Saifi&apos;s Portfolio</title>
         <meta
           name="description"
           content="Portfolio of Javed Saifi, MERN Stack Developer"
