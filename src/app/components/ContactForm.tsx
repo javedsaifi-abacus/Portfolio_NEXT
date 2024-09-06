@@ -4,7 +4,6 @@ import { useRouter } from 'next/navigation'; // Import useRouter from next/navig
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify'; // Import Toast components
 import 'react-toastify/dist/ReactToastify.css'; // Import Toast styles
-import styles from './ContactForm.module.css'; // Import the CSS module
 
 const ContactForm = () => {
   const router = useRouter(); // Initialize the router
@@ -44,51 +43,46 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className={styles.section}>
-      <div className={styles.container}>
-        <h2 className={styles.title}>Contact Us</h2>
+    <section id="contact">
+      <div className="container">
+        <h2 className="title">Contact Us</h2>
         <form
-          className={styles.form}
+          className="form"
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="access_key" value="a8f92459-6c6f-4139-856f-a63b451fe731" />
-          
-          <div className={styles.inputGroup}>
-            <label htmlFor="name">Name</label>
+
+          <div className="inputGroup">
             <input
               type="text"
               id="name"
               name="name"
               placeholder="Enter your name..."
               required
-              className={styles.input}
             />
           </div>
 
-          <div className={styles.inputGroup}>
-            <label htmlFor="email">Email</label>
+          <div className="inputGroup">
             <input
               type="email"
               id="email"
               name="email"
               placeholder="Enter your email..."
               required
-              className={styles.input}
             />
           </div>
 
-          <div className={styles.inputGroup}>
-            <label htmlFor="message">Message</label>
+          <div className="inputGroup">
             <textarea
               id="message"
               name="message"
               placeholder="Enter your message..."
               required
-              className={styles.textarea}
+              className="textarea"
             ></textarea>
           </div>
 
-          <button type="submit" className={styles.button}>Submit</button>
+          <button type="submit" className="button">Submit</button>
         </form>
         <ToastContainer />
       </div>
