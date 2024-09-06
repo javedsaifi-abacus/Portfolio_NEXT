@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 import React from "react";
 import Link from "next/link";
 import styles from "../components/Navbar.module.css"; // Import the CSS module
@@ -23,7 +22,13 @@ const Navbar: React.FC = () => {
           <Link href="/projects" className={styles.a}>Projects</Link>
         </li>
         <li className={styles.li}>
+          <Link href="/education" className={styles.a}>Education</Link>
+        </li>
+        <li className={styles.li}>
           <Link href="/contact" className={styles.a}>Contact</Link>
+        </li>
+        <li className={styles.li}>
+          <Link href="/tools" className={styles.a}>Tools</Link> {/* New Tools Link */}
         </li>
       </ul>
     </nav>
