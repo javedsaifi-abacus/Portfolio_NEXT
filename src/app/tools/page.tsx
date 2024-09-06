@@ -1,12 +1,12 @@
 // /src/app/tools/page.tsx
 import Section from "../components/Section";
 import ContentItem from "../components/ContentItem";
-import Navbar from "../components/Navbar"; // Import the Navbar component
+// import Navbar from "../components/Navbar"; // Import the Navbar component
 
 const Tools = () => (
   
   <>
-  <Navbar />
+  {/* <Navbar /> */}
   <Section id="tools" title="Tools & Software">
     <div className="content-list">
       <ContentItem title="VS Code" />

@@ -1,11 +1,11 @@
-import Navbar from "../components/Navbar"; // Update path if needed
+// import Navbar from "../components/Navbar"; // Update path if needed
 import Section from "../components/Section";
 import ContentItem from "../components/ContentItem";
 import styles from "../skills/skills.module.css"; // Import the CSS module
 
 const Skills = () => (
   <>
-    <Navbar /> {/* Add the Navbar component here */}
+    {/* <Navbar /> Add the Navbar component here */}
     <Section id="skills" title="Technical Skills">
       <div className={styles.skillsContainer}>
         <ContentItem title="HTML5 & CSS3" />

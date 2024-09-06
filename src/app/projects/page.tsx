@@ -1,10 +1,10 @@
-import Navbar from "../components/Navbar"; // Update path if needed
+// import Navbar from "../components/Navbar"; // Update path if needed
 import Section from "../components/Section";
 import ContentItem from "../components/ContentItem";
 
 const Projects = () => (
   <>
-    <Navbar /> {/* Add the Navbar component here */}
+    {/* <Navbar /> Add the Navbar component here */}
     <Section id="projects" title="Projects">
       <div className="content-list">
         <ContentItem 

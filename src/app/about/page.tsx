@@ -1,46 +1,38 @@
-import Navbar from "../components/Navbar"; // Import the Navbar component
-import Section from "../components/Section"; // Ensure this path is correct
-import styles from "../about/AboutMe.module.css"; // Import the CSS module
+// import Navbar from "../components/Navbar"; // Import the Navbar component
+import Section from "../components/Section"; // Import the Section component
+import ContentItem from "../components/ContentItem"; // Import the ContentItem component
 
 const About = () => {
   return (
     <>
-      <Navbar />
-      <div className={styles.aboutContainer}>
-        <Section id="about" title="About Me">
-          <div className={styles.columnContainer}>
-            {/* About Me Section */}
-            <div className={styles.contentBlock}>
-              <h3 className={styles.header}>About Me</h3>
-              <p className={styles.paragraph}>
-                I am a passionate and driven web developer with a keen interest in building scalable and user-centric applications. With a strong foundation in JavaScript and Angular, I strive to create intuitive and responsive web experiences that delight users.
-              </p>
-              <p className={styles.paragraph}>
-                My journey in web development began with a fascination for technology and a love for problem-solving. Since then, I have honed my skills through various projects, where I embraced new challenges and continuously sought to learn and adapt to the ever-evolving tech landscape.
-              </p>
-              <p className={styles.paragraph}>
-                I am a collaborative team player who thrives in dynamic environments and enjoys working with like-minded professionals. My goal is to leverage my technical expertise, creativity, and attention to detail to build meaningful digital solutions that make a difference.
-              </p>
-            </div>
+      {/* <Navbar /> Include the Navbar at the top */}
+      <Section id="about" title="About Me">
+        <div>
+          {/* About Me Section */}
+          <ContentItem 
+            title="About Me" 
+            details=
+              "I am a passionate web developer with a strong foundation in JavaScript and Angular, creating intuitive and scalable web applications."
+            
+          />
 
-            {/* Interests & Hobbies Section */}
-            <div className={styles.contentBlock}>
-              <h3 className={styles.header}>Interests & Hobbies</h3>
-              <p className={styles.paragraph}>
-                When I am not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or enhancing my knowledge in areas such as cloud computing, AI, and machine learning. I also enjoy playing chess, reading books on self-improvement, and engaging in community tech events.
-              </p>
-            </div>
+          {/* Interests & Hobbies Section */}
+          <ContentItem 
+            title="Interests & Hobbies" 
+            details=
+              "Outside coding, I explore tech trends, contribute to open-source, and enjoy chess and self-improvement books."
+            
+          />
 
-            {/* Core Values Section */}
-            <div className={styles.contentBlock}>
-              <h3 className={styles.header}>Core Values</h3>
-              <p className={styles.paragraph}>
-                I believe in the power of collaboration, innovation, and continuous learning. My approach to development is rooted in writing clean, efficient code and prioritizing user experience. I am committed to ethical practices and building applications that are accessible to all.
-              </p>
-            </div>
-          </div>
-        </Section>
-      </div>
+          {/* Core Values Section */}
+          <ContentItem 
+            title="Core Values" 
+            details=
+              "I prioritize collaboration, innovation, and user experience, committed to writing clean code and ethical practices."
+             
+          />
+        </div>
+      </Section>
     </>
   );
 };
