@@ -130,54 +130,84 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(90deg, #4e54c8, #8f94fb); /* Gradient background */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align logo on left and links on right */
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 10px 0;
+  padding: 10px 20px;
   z-index: 1000;
 }
 
+/* Logo styles */
+.logo {
+  margin-left: 20px;
+}
+
+.logo-link {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for logo */
+.logo-link:hover {
+  color: #ffeb3b;
+}
+
 /* Navigation list */
-.nav ul {
+.nav-links {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
+  flex-grow: 1; /* Allow the links to grow to fill space */
 }
 
 /* Navigation items */
-.nav li {
+.nav-links li {
   margin: 0 15px;
 }
 
 /* Links */
-.nav a {
+.nav-links a {
   color: #fff;
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
   padding: 10px 15px;
   transition: color 0.3s ease, background-color 0.3s ease;
-  border-radius: 4px; /* Rounded corners for links */
+  border-radius: 4px;
 }
 
 /* Hover and active states */
-.nav a:hover, .nav a:focus {
-  background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
-  color: #ffeb3b; /* Yellow text color on hover */
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffeb3b;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
-    align-items: center;
+  .nav {
+    flex-direction: column; /* Stack items in a column on smaller screens */
   }
 
-  .nav li {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  .nav-links li {
     margin: 10px 0;
   }
 }
+
+
 
 /* Contact Form Section */
 #contact {
