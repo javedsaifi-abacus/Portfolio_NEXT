@@ -14,7 +14,7 @@ export default function Home() {
         <title>Javed Saifi&apos;s Portfolio</title>
         <meta
           name="description"
-          content="Portfolio of Javed Saifi, MERN Stack Developer"
+          content="Portfolio of Javed Saifi, MERN Developer"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
