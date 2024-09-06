@@ -1,17 +1,14 @@
-// /src/components/Section.tsx
+// src/app/Section/page.tsx
 import React from 'react';
+import Section from '../components/Section'; // Adjust the import path as necessary
 
-interface SectionProps {
-  id: string;
-  title: string;
-  children: React.ReactNode;
-}
+const Page: React.FC = () => {
+  return (
+    <Section id="section-1" title="Section Title">
+      {/* Your content goes here */}
+      <p>This is the content for this section.</p>
+    </Section>
+  );
+};
 
-const Section: React.FC<SectionProps> = ({ id, title, children }) => (
-  <section id={id} className="section">
-    <h2>{title}</h2>
-    {children}
-  </section>
-);
-
-export default Section;
+export default Page;
