@@ -1,57 +1,83 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 40px; /* Increased padding for a spacious look */
-    background: linear-gradient(135deg, #e0e0e0, #ffffff); /* Subtle gradient background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a floating effect */
-    border-bottom: 2px solid #ddd; /* Bottom border for definition */
-    margin-top: 50px; /* Add margin-top to ensure it doesn’t overlap with fixed navbar */
-  }
-  
-  .content {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .textSection {
-    flex: 1;
-    padding-right: 40px; /* Spacing between text and image */
-  }
-  
-  .textSection h1 {
-    font-size: 3rem; /* Larger font size for emphasis */
-    margin-bottom: 10px;
-    font-family: 'Arial', sans-serif; /* Modern sans-serif font */
-    font-weight: 700; /* Bold font weight */
-    color: #333; /* Darker text color for better readability */
-  }
-  
-  .textSection p {
-    font-size: 1.1rem;
-    margin: 5px 0;
-    color: #555; /* Slightly lighter text color */
-  }
-  
-  .imageSection {
-    position: relative;
-    flex-shrink: 0;
-    border-radius: 12px; /* Rounded corners */
-    overflow: hidden; /* Ensures image respects rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-  }
-  
-  .profilePic {
-    border-radius: 12px; /* Matching rounded corners */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Default shadow */
-  }
-  
-  .profilePic:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  background: linear-gradient(135deg, #e0e0e0, #ffffff);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  margin-top: 60px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.textSection {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 10px;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  opacity: 0.8; /* Slightly transparent for a modern look */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.description:hover {
+  opacity: 1; /* Full opacity on hover */
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.location, .contact {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.imageSection {
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+}
+
+.profilePic {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+}
+
+.profilePic:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.4);
+}

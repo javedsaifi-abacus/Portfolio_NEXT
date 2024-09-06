@@ -5,9 +5,13 @@ const Header: React.FC = () => (
   <header className={styles.header}>
     <div className={styles.content}>
       <div className={styles.textSection}>
-        <h1>Javed Saifi</h1>
-        <p>MERN Stack Developer | Faridabad, Haryana, India</p>
-        <p>+91-8527019853 | saifijaved616@gmail.com</p>
+        <h1 className={styles.title}>JAVED SAIFI</h1>
+        <p className={styles.subtitle}>Innovative MERN Stack Developer</p>
+        <p className={styles.description}>
+          Passionate about creating dynamic and efficient web applications. Leveraging cutting-edge technologies to build scalable solutions and drive digital transformation.
+        </p>
+        <p className={styles.location}>Based in Faridabad, Haryana, India</p>
+        <p className={styles.contact}>+91-8527019853 | saifijaved616@gmail.com</p>
       </div>
       <div className={styles.imageSection}>
         <Image
