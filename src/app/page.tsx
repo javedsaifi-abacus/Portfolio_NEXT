@@ -1,11 +1,11 @@
-// /src/app/page.tsx
 import Head from "next/head";
-import Header from "../app/components/Header";
-import Section from "../app/Section/page";
-import ContactForm from "../app/components/ContactForm";
-import Navbar from "../app/components/Navbar";
+import Header from "../app/components/Header"; // Update path if needed
+import Section from "../app/components/Section"; // Update path if needed
+import ContactForm from "../app/components/ContactForm"; // Update path if needed
+import Navbar from "../app/components/Navbar"; // Update path if needed
 
-// import "../styles/globals.css"; // Import global styles
+// Import global styles
+// import "../styles/globals.css";
 
 export default function Home() {
   return (
@@ -35,53 +35,25 @@ export default function Home() {
 
       <Section id="skills" title="Technical Skills">
         <div className="content-list">
-          <div className="content-item">
-            <h3>HTML5 & CSS3</h3>
-          </div>
-          <div className="content-item">
-            <h3>JavaScript (ES6+)</h3>
-          </div>
-          <div className="content-item">
-            <h3>Node.js core modules</h3>
-          </div>
-          <div className="content-item">
-            <h3>Express.js</h3>
-          </div>
-          <div className="content-item">
-            <h3>Database integration (MongoDB, MySQL)</h3>
-          </div>
-          <div className="content-item">
-            <h3>Authentication & Authorization (JWT)</h3>
-          </div>
-          <div className="content-item">
-            <h3>Error handling & debugging</h3>
-          </div>
-          <div className="content-item">
-            <h3>Package management (NPM)</h3>
-          </div>
-          <div className="content-item">
-            <h3>Version control (Git & GitHub)</h3>
-          </div>
+          <div className="content-item"><h3>HTML5 & CSS3</h3></div>
+          <div className="content-item"><h3>JavaScript (ES6+)</h3></div>
+          <div className="content-item"><h3>Node.js core modules</h3></div>
+          <div className="content-item"><h3>Express.js</h3></div>
+          <div className="content-item"><h3>Database integration (MongoDB, MySQL)</h3></div>
+          <div className="content-item"><h3>Authentication & Authorization (JWT)</h3></div>
+          <div className="content-item"><h3>Error handling & debugging</h3></div>
+          <div className="content-item"><h3>Package management (NPM)</h3></div>
+          <div className="content-item"><h3>Version control (Git & GitHub)</h3></div>
         </div>
       </Section>
 
       <Section id="tools" title="Tools & Software">
         <div className="content-list">
-          <div className="content-item">
-            <h3>VS Code</h3>
-          </div>
-          <div className="content-item">
-            <h3>Putty</h3>
-          </div>
-          <div className="content-item">
-            <h3>FileZilla</h3>
-          </div>
-          <div className="content-item">
-            <h3>Postman</h3>
-          </div>
-          <div className="content-item">
-            <h3>DBeaver</h3>
-          </div>
+          <div className="content-item"><h3>VS Code</h3></div>
+          <div className="content-item"><h3>Putty</h3></div>
+          <div className="content-item"><h3>FileZilla</h3></div>
+          <div className="content-item"><h3>Postman</h3></div>
+          <div className="content-item"><h3>DBeaver</h3></div>
         </div>
       </Section>
 
