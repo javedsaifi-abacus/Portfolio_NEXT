@@ -1,32 +1,56 @@
-/* /src/components/Navbar.module.css */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #004e92;
-    color: white;
-    padding: 1rem 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+/* src/components/Navbar.module.css */
+
+/* Navbar container */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb); /* Gradient background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+/* Navigation list */
+.ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation items */
+.li {
+  margin: 0 15px;
+}
+
+/* Links */
+.a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 15px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 4px; /* Rounded corners for links */
+}
+
+/* Hover and active states */
+.a:hover, .a:focus {
+  background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+  color: #ffeb3b; /* Yellow text color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ul {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .navList {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+
+  .li {
+    margin: 10px 0;
   }
-  
-  .navItem a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .navItem a:hover {
-    color: #e0e0e0;
-  }
-  
+}

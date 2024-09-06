@@ -14,7 +14,7 @@ export default function Home() {
         <title>Javed Saifi&apos;s Portfolio</title>
         <meta
           name="description"
-          content="Portfolio of Javed Saifi, MERN Developer"
+          content="Portfolio of Javed Saifi, MERN Stack Developer"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -23,7 +23,7 @@ export default function Home() {
 
       <Header />
 
-      <Section id="about" title="About Me">
+      {/* <Section id="about" title="About Me">
         <p>
           I am an enthusiastic and motivated recent graduate with a strong
           foundation in JavaScript and Angular, eager to start a career in web
@@ -31,9 +31,9 @@ export default function Home() {
           from experienced professionals, and contribute to innovative projects
           in a dynamic and collaborative environment.
         </p>
-      </Section>
+      </Section> */}
 
-      <Section id="skills" title="Technical Skills">
+      {/* <Section id="skills" title="Technical Skills">
         <div className="content-list">
           <div className="content-item"><h3>HTML5 & CSS3</h3></div>
           <div className="content-item"><h3>JavaScript (ES6+)</h3></div>
@@ -45,9 +45,9 @@ export default function Home() {
           <div className="content-item"><h3>Package management (NPM)</h3></div>
           <div className="content-item"><h3>Version control (Git & GitHub)</h3></div>
         </div>
-      </Section>
+      </Section> */}
 
-      <Section id="tools" title="Tools & Software">
+      {/* <Section id="tools" title="Tools & Software">
         <div className="content-list">
           <div className="content-item"><h3>VS Code</h3></div>
           <div className="content-item"><h3>Putty</h3></div>
@@ -55,9 +55,9 @@ export default function Home() {
           <div className="content-item"><h3>Postman</h3></div>
           <div className="content-item"><h3>DBeaver</h3></div>
         </div>
-      </Section>
+      </Section> */}
 
-      <Section id="experience" title="Work Experience">
+      {/* <Section id="experience" title="Work Experience">
         <div className="content-list">
           <div className="content-item">
             <h3>Software Developer Trainee</h3>
@@ -83,9 +83,9 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </Section>
+      </Section> */}
 
-      <Section id="education" title="Educational Background">
+      {/* <Section id="education" title="Educational Background">
         <div className="content-list">
           <div className="content-item">
             <h3>Bachelor of Technology in Computer Science & Engineering</h3>
@@ -97,9 +97,9 @@ export default function Home() {
             <p>Specialization in Non-medical</p>
           </div>
         </div>
-      </Section>
+      </Section> */}
 
-      <Section id="projects" title="Projects">
+      {/* <Section id="projects" title="Projects">
         <div className="content-list">
           <div className="content-item">
             <h3>Dedicated Sales Force Automation (SFA) Project at SimollBath</h3>
@@ -110,9 +110,9 @@ export default function Home() {
             <p>Technology used - Angular, Node.js, Express.js, XLSX</p>
           </div>
         </div>
-      </Section>
+      </Section> */}
 
-      <ContactForm />
+      {/* <ContactForm /> */}
     </>
   );
 }

@@ -1,31 +1,29 @@
-// /src/components/Navbar.tsx
+// src/components/Navbar.tsx
+import React from "react";
 import Link from "next/link";
-import styles from "../components/Navbar.module.css";
+import styles from "../components/Navbar.module.css"; // Import the CSS module
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
-    <nav className={styles.navbar}>
-      <ul className={styles.navList}>
-        <li className={styles.navItem}>
-          <Link href="#about">About</Link>
+    <nav className={styles.nav}>
+      <ul className={styles.ul}>
+        <li className={styles.li}>
+          <Link href="/" className={styles.a}>Home</Link>
         </li>
-        <li className={styles.navItem}>
-          <Link href="#skills">Skills</Link>
+        <li className={styles.li}>
+          <Link href="/about" className={styles.a}>About</Link>
         </li>
-        <li className={styles.navItem}>
-          <Link href="#tools">Tools</Link>
+        <li className={styles.li}>
+          <Link href="/skills" className={styles.a}>Skills</Link>
         </li>
-        <li className={styles.navItem}>
-          <Link href="#experience">Experience</Link>
+        <li className={styles.li}>
+          <Link href="/experience" className={styles.a}>Experience</Link>
         </li>
-        <li className={styles.navItem}>
-          <Link href="#education">Education</Link>
+        <li className={styles.li}>
+          <Link href="/projects" className={styles.a}>Projects</Link>
         </li>
-        <li className={styles.navItem}>
-          <Link href="#projects">Projects</Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link href="#contact">Contact</Link>
+        <li className={styles.li}>
+          <Link href="/contact" className={styles.a}>Contact</Link>
         </li>
       </ul>
     </nav>
