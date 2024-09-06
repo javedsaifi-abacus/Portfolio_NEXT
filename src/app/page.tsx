@@ -10,14 +10,14 @@ import Navbar from "../app/components/Navbar"; // Update path if needed
 export default function Home() {
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Javed Saifi&apos;s Portfolio</title>
         <meta
           name="description"
           content="Portfolio of Javed Saifi, MERN Stack Developer"
         />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> */}
 
       <Navbar />
 
