@@ -1,5 +1,6 @@
 import Image from "next/image";
-import styles from "../components/Header.module.css"; // Ensure the path is correct
+import styles from "../components/Header.module.css";
+import { FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaInfoCircle } from 'react-icons/fa'; // Font Awesome icons
 
 const Header: React.FC = () => (
   <div className={styles.wrapper}>
@@ -13,13 +14,24 @@ const Header: React.FC = () => (
           </p>
           <p className={styles.location}>Based in Faridabad, Haryana, India</p>
           <p className={styles.contact}>+91-8527019853 | saifijaved616@gmail.com</p>
+          
+          <div className={styles.socialLinks}>
+            <a href="https://x.com/javedsaifi2808" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><FaTwitter /></a>
+            <a href="https://www.linkedin.com/in/javed-saifi-b9660418a/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><FaLinkedin /></a>
+            <a href="https://github.com/javed-tlp" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><FaGithub /></a>
+            <a href="https://www.instagram.com/javed_saifi_0786/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><FaInstagram /></a>
+            <a href="/about" className={styles.aboutButton}>
+            <FaInfoCircle className={styles.icon} /> {/* Updated About button icon */}
+            <span>About Me</span>
+          </a>
+          </div>
         </div>
         <div className={styles.imageSection}>
           <Image
             src="/javed.png"
             alt="Javed Saifi"
-            width={300} // Increased width for larger size
-            height={200} // Adjusted height for rectangle
+            width={300}
+            height={200}
             className={styles.profilePic}
           />
         </div>

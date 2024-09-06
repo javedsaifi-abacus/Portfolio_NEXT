@@ -8,9 +8,9 @@ const Navbar: React.FC = () => {
         <li>
           <Link href="/" className="a">Home</Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/about" className="a">About</Link>
-        </li>
+        </li> */}
         <li>
           <Link href="/skills" className="a">Skills</Link>
         </li>
