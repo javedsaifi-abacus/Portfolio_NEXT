@@ -37,7 +37,7 @@ const ContactForm = () => {
 
       if (response.ok) {
         toast.success('Message sent successfully!', {
-          position: "top-center",
+          position: "bottom-center",
           autoClose: 2000,
           onClose: () => {
             router.push('/');
