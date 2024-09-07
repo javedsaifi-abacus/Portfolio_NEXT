@@ -7,7 +7,7 @@ const Skills = () => (
   <>
     {/* <Navbar /> Add the Navbar component here */}
     <Section id="skills" title="Technical Skills">
-      <div className={styles.skillsContainer}>
+      <div className="content-list">
         <ContentItem title="HTML5 & CSS3" />
         <ContentItem title="JavaScript (ES6+)" />
         <ContentItem title="Node.js core modules" />

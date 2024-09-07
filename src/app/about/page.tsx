@@ -7,7 +7,7 @@ const About = () => {
     <>
       {/* <Navbar /> Include the Navbar at the top */}
       <Section id="about" title="About Me">
-        <div>
+        <div className="content-list">
           {/* About Me Section */}
           <ContentItem 
             title="About Me" 

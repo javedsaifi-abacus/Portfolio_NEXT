@@ -26,41 +26,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color changes */
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem 2rem;
-  background-color: #004e92;
-  background-image: linear-gradient(315deg, #004e92 0%, #000428 74%);
-  color: white;
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
-}
-
-.header img {
-  border-radius: 50%;
-  margin-bottom: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for image hover */
-}
-
-.header img:hover {
-  transform: scale(1.1); /* Slightly enlarge image on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
-
-.header h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Shadow effect for text */
-}
-
-.header p {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
-}
-
 .section {
   padding: 4rem 2rem;
   text-align: center;
@@ -68,60 +33,115 @@ body {
   transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
+/* Section Title Styles */
 .section h2 {
-  font-size: 2rem;
-  color: #004e92;
-  margin-bottom: 2rem;
-  position: relative;
+  font-size: 2.5rem; /* Larger font size for prominence */
+  font-weight: bold; /* Bold text for emphasis */
+  color: #004e92; /* Primary text color */
+  margin-bottom: 2rem; /* Space below the title */
+  position: relative; /* Positioning context for pseudo-elements */
+  text-transform: uppercase; /* Uppercase text for emphasis */
   transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for header color and transform */
 }
 
+/* Decorative Line Below Title */
 .section h2::after {
   content: '';
   display: block;
-  width: 60px;
-  height: 3px;
-  background-color: #004e92;
-  margin: 1rem auto;
-  border-radius: 2px;
+  width: 80px; /* Width of the decorative line */
+  height: 4px; /* Height of the line */
+  background: linear-gradient(90deg, #0070f3 0%, #00d084 100%); /* Gradient color */
+  margin: 0.5rem auto 0; /* Center align and space above the line */
+  border-radius: 2px; /* Rounded corners for the line */
 }
 
+/* Hover Effect */
 .section h2:hover {
   color: #003d7a; /* Darker color on hover */
   transform: translateY(-5px); /* Slightly lift header on hover */
 }
 
+.section h2:hover::after {
+  background: linear-gradient(90deg, #00d084 0%, #0070f3 100%); /* Inverted gradient color on hover */
+}
+
+/* Content Item Styles */
+.skillsContainer {
+  display: flex; /* Enable Flexbox */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center items horizontally */
+  padding: 40px 20px;
+  background-color: #f4f4f4; /* Light background for the container */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.content-item {
+  background: #ffffff; /* Clean white background */
+  padding: 2rem;
+  border-radius: 12px; /* Smooth rounded corners */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  border: 1px solid #ddd; /* Light border for definition */
+  position: relative; /* Positioning context for pseudo-elements */
+  overflow: hidden; /* Ensure pseudo-elements don’t overflow */
+  display: flex; /* Flexbox for alignment */
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+}
+
+/* Hover Effect */
+.content-item:hover {
+  transform: translateY(-8px); /* Lift the item on hover */
+  background: #f0f0f0; /* Slight background change on hover */
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  border-color: #0070f3; /* Border color change on hover */
+}
+
+/* Heading Styles */
+.content-item h3 {
+  font-size: 1.75rem; /* Adjusted font size for balance */
+  margin: 0;
+  color: #333; /* Dark text color for contrast */
+  font-weight: 700; /* Bold text for emphasis */
+  position: relative; /* Ensure positioning for pseudo-elements */
+  padding-bottom: 0.5rem; /* Space below the heading */
+  border-bottom: 3px solid #0070f3; /* Decorative underline */
+}
+
+/* Content Description */
+.content-item p {
+  font-size: 1rem; /* Standard font size for content */
+  color: #666; /* Lighter color for text */
+  margin-top: 0.5rem;
+  line-height: 1.6; /* Improved readability */
+  text-align: center; /* Center align text for consistency */
+}
+
+/* Layout for Multiple Items */
 .content-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 2rem; /* Space between items */
   margin-top: 2rem;
+  padding: 0 1rem; /* Padding on sides for alignment */
 }
 
-.content-item {
-  background: #f5f5f5;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease; /* Smooth transitions */
-}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .content-item {
+    padding: 1.5rem; /* Reduced padding on smaller screens */
+    border-radius: 10px; /* Slightly smaller border-radius */
+  }
 
-.content-item:hover {
-  transform: scale(1.05); /* Slightly enlarge item on hover */
-  background-color: #e0e0e0; /* Light grey background on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-  border: 1px solid #004e92; /* Border color change on hover */
-}
+  .content-item h3 {
+    font-size: 1.5rem; /* Adjusted font size for smaller screens */
+  }
 
-.content-item h3 {
-  font-size: 1.5rem;
-  margin: 0;
-  color: #004e92; /* Primary color for heading */
-  transition: color 0.3s ease; /* Smooth transition for heading color */
-}
-
-.content-item h3:hover {
-  color: #003d7a; /* Darker color on hover */
+  .content-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted column sizing */
+  }
 }
 
 /* Navbar container */
@@ -207,8 +227,6 @@ body {
   }
 }
 
-
-
 /* Contact Form Section */
 #contact {
   padding: 60px 0;
@@ -232,81 +250,47 @@ body {
 /* Contact Form Title */
 #contact .title {
   text-align: center;
-  font-size: 3rem; /* Larger font size for better visibility */
+  font-size: 2.5rem;
   color: #333;
-  margin-bottom: 30px; /* Increased margin for better spacing */
-  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
 }
 
-/* Contact Form Styles */
-#contact .form {
-  display: grid;
-  grid-template-columns: 1fr; /* Single column grid */
-  gap: 20px; /* Space between form elements */
-}
-
-/* Input Group Styles */
-#contact .inputGroup {
+/* Title Decoration */
+#contact .title::after {
+  content: '';
   display: block;
-  margin-bottom: 20px; /* Spacing between input groups */
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #0070f3 0%, #00d084 100%);
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
-/* Input and Textarea Styles */
-#contact .inputGroup input,
-#contact .inputGroup textarea {
+/* Contact Form Inputs */
+#contact input,
+#contact textarea {
   width: 100%;
-  padding: 16px; /* Increased padding for more comfortable input */
+  padding: 12px;
+  border-radius: 8px;
   border: 1px solid #ddd;
-  border-radius: 10px; /* Adjusted border-radius for a more rounded look */
-  font-size: 1rem; /* Consistent font size */
-  outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: #f9f9f9;
-}
-
-/* Placeholder Text */
-#contact .inputGroup input::placeholder,
-#contact .inputGroup textarea::placeholder {
-  color: #aaa;
-  font-style: italic;
-}
-
-/* Focus and Hover States */
-#contact .inputGroup input:focus,
-#contact .inputGroup textarea:focus {
-  border-color: #0070f3;
-  box-shadow: 0 0 10px rgba(0, 112, 243, 0.2); /* Enhanced box-shadow */
-}
-
-#contact .inputGroup input:hover,
-#contact .inputGroup textarea:hover {
-  border-color: #0070f3;
-}
-
-/* Textarea Specific Styles */
-#contact .textarea {
-  min-height: 180px; /* Increased minimum height */
-  resize: vertical;
+  margin-bottom: 20px;
+  font-size: 16px;
 }
 
 /* Submit Button */
-#contact .button {
-  background-color: #0070f3;
+#contact button {
+  background: #0070f3;
   color: #fff;
-  padding: 16px 28px; /* Increased padding for a more prominent button */
   border: none;
-  border-radius: 10px; /* Adjusted border-radius */
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
-  font-size: 1rem; /* Consistent font size */
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  align-self: center; /* Center the button horizontally */
+  transition: background-color 0.3s ease;
 }
 
-#contact .button:hover {
-  background-color: #005bb5;
-}
-
-#contact .button:active {
-  background-color: #003d80;
-  transform: scale(0.98);
+/* Hover effect for submit button */
+#contact button:hover {
+  background: #005bb5;
 }
