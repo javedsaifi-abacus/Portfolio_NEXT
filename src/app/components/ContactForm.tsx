@@ -14,6 +14,21 @@ const ContactForm = () => {
     const formElement = e.currentTarget as HTMLFormElement;
     const formData = new FormData(formElement);
 
+    // Get the email value from the form
+    const email = formData.get('email') as string;
+
+    // Regular expression to validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      // Show error toast if email is invalid
+      toast.error('Invalid email address. Please enter a valid email.', {
+        position: "top-center",
+        autoClose: 2000,
+      });
+      return; // Exit the function if email is invalid
+    }
+
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
