@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "../components/Header.module.css";
-import { FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaInfoCircle } from 'react-icons/fa'; // Font Awesome icons
+import { FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaInfoCircle, FaHandshake  } from 'react-icons/fa'; // Font Awesome icons
 
 const Header: React.FC = () => (
   <div className={styles.wrapper}>
@@ -23,6 +23,10 @@ const Header: React.FC = () => (
             <a href="/about" className={styles.aboutButton}>
             <FaInfoCircle className={styles.icon} /> {/* Updated About button icon */}
             <span>About Me</span>
+          </a>
+          <a href="/contact" className={styles.aboutButton}>
+            <FaHandshake  className={styles.icon} /> {/* Updated About button icon */}
+            <span>Connect Me</span>
           </a>
           </div>
         </div>

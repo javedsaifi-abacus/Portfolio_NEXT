@@ -153,7 +153,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between; /* Align logo on left and links on right */
-  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  background: linear-gradient(90deg, #000000, #8f94fb);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
   z-index: 1000;

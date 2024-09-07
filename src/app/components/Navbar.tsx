@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image"; // Import Image from next/image for optimized images
 
 const Navbar: React.FC = () => {
   return (
@@ -7,15 +8,18 @@ const Navbar: React.FC = () => {
       {/* Logo on the left linking to the home page */}
       <div className="logo">
         <Link href="/">
-           <span className="logo-link">JAVED</span>
+          <Image
+            src="/logojaved.png" // Replace with the path to your logo image
+            alt="JAVED Logo"
+            width={30} // Adjust width as needed
+            height={1} // Adjust height as needed
+            className="logo-img"
+          />
         </Link>
       </div>
 
       {/* Navigation items on the right */}
       <ul className="nav-links">
-        {/* <li>
-          <Link href="/">Home</Link>
-        </li> */}
         <li>
           <Link href="/skills">Skills</Link>
         </li>
@@ -31,9 +35,9 @@ const Navbar: React.FC = () => {
         <li>
           <Link href="/tools">Tools</Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/contact">Contact</Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
