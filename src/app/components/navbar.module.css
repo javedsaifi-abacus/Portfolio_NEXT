@@ -29,12 +29,58 @@
 .menu-toggle {
   display: none; /* Hidden by default on larger screens */
   cursor: pointer;
-  /* Align menu toggle to the right */
+  position: relative; /* Position relative for the dots */
+  width: 30px; /* Increased width for better visibility */
+  height: 30px; /* Increased height for better visibility */
+  transition: transform 0.3s ease; /* Smooth transform transition */
 }
 
-.menu-icon {
-  color: #e0e0e0;
-  font-size: 20px;
+/* Container for dots */
+.menu-toggle::before,
+.menu-toggle::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px; /* Thicker dots for a modern look */
+  background-color: #e0e0e0; /* Light gray color for the dots */
+  border-radius: 2px; /* Rounded corners for a smoother appearance */
+  transition: background-color 0.3s ease; /* Transition for color change */
+}
+
+/* Position of the first dot */
+.menu-toggle::before {
+  top: 6px; /* Spacing from the top */
+}
+
+/* Position of the second dot */
+.menu-toggle::after {
+  bottom: 6px; /* Spacing from the bottom */
+}
+
+/* Middle dot with animation */
+.menu-toggle div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px; /* Width of the middle dot */
+  height: 4px; /* Height of the middle dot */
+  background-color: #e0e0e0; /* Light gray color for the dot */
+  border-radius: 2px; /* Rounded corners for a smoother appearance */
+  transform: translate(-50%, -50%) rotate(0deg); /* Center the dot */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+/* Active state for menu toggle */
+.menu-toggle.active div {
+  background-color: #ff5722; /* Change color when active */
+  transform: translate(-50%, -50%) rotate(45deg); /* Rotate the dot when active */
+}
+
+/* Hover effect for the menu toggle */
+.menu-toggle:hover::before,
+.menu-toggle:hover::after,
+.menu-toggle:hover div {
+  background-color: #ff5722; /* Change color on hover */
 }
 
 /* Navigation list */
@@ -126,31 +172,25 @@
   }
 
   .nav-links {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10px;
     position: fixed;
-    top: 0;
-    right: 0;
-    background: #0d0d0d; /* Background color to match navbar */
-    width: 250px; /* Adjust width as needed */
-    height: calc(100% - 80px); /* Adjust height to fit below the navbar */
-    transform: translateX(100%); /* Hide off-screen by default */
-    transition: transform 0.3s ease; /* Smooth transition for sliding effect */
+    top: 80px; /* Align below the navbar */
+    left: 0;
+    width: 100%;
+    background: #212121; /* Dark background for the mobile menu */
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    align-items: center;
+    padding: 20px 0; /* Add padding to the mobile menu */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for the mobile menu */
+    transition: transform 0.3s ease;
+    transform: translateY(-100%); /* Initially hidden */
   }
 
   .nav-links.show {
-    transform: translateX(0); /* Slide in when menu is open */
+    transform: translateY(0); /* Show the menu when active */
   }
 
   .nav-links.hide {
-    transform: translateX(100%); /* Slide out when menu is closed */
-  }
-
-  .nav-links li {
-    margin: 8px 0; /* Reduced spacing between items */
+    display: none; /* Hide the menu when not active */
   }
 }

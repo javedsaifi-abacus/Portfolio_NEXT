@@ -15,8 +15,8 @@ const Navbar: React.FC = () => {
   return (
     <nav className={styles.nav}>
       {/* Menu toggle for mobile */}
-      <div className={styles["menu-toggle"]} onClick={toggleMenu}>
-        <FontAwesomeIcon icon={faEllipsisV} className={styles["menu-icon"]} />
+      <div className={`${styles["menu-toggle"]} ${menuOpen ? styles["active"] : ""}`} onClick={toggleMenu}>
+        <div></div>
       </div>
 
       {/* Logo on the left linking to the home page */}
