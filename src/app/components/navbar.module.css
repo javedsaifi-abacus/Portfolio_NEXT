@@ -6,7 +6,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Space out the children elements */
   background: linear-gradient(90deg, #0d0d0d, #434343); /* Darker gradient background */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow for better contrast */
   padding: 10px 20px; /* Reduced padding for a more compact look */
@@ -16,7 +16,7 @@
 
 /* Logo styles */
 .logo {
-  margin-left: auto; /* Push logo to the right on larger screens */
+  /* Align logo to the left */
 }
 
 .logo-text {
@@ -29,6 +29,7 @@
 .menu-toggle {
   display: none; /* Hidden by default on larger screens */
   cursor: pointer;
+  /* Align menu toggle to the right */
 }
 
 .menu-icon {
@@ -40,7 +41,7 @@
 .nav-links {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Space out the links */
   margin: 0;
   padding: 0;
   flex-grow: 1;
@@ -78,7 +79,6 @@
 .nav-links a:hover,
 .nav-links a:focus {
   color: #ff5722; /* Modern orange accent color */
-  /* No background change or shadow effect */
 }
 
 /* Modern design for the "Download CV" tab */
@@ -107,11 +107,17 @@
 @media (max-width: 468px) {
   .menu-toggle {
     display: block; /* Show menu toggle on screens below 468px */
+    position: absolute;
+    right: 20px; /* Align to the right side */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
   }
 
   .logo {
-    margin-left: 0; /* Remove margin on mobile */
-    margin-right: auto; /* Push logo to the right */
+    position: absolute;
+    left: 20px; /* Align logo to the left */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
   }
 
   .nav-links {
