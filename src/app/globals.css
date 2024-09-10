@@ -24,7 +24,6 @@ body {
   background-color: #ffffff;
   color: #333;
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color changes */
-  margin-top: 60px; /* Margin-top equal to or greater than the navbar height */
 }
 
 /* Global Styles for Sections */
