@@ -6,6 +6,15 @@ const Header: React.FC = () => (
   <div className={styles.wrapper}>
     <header className={styles.header}>
       <div className={styles.content}>
+      <div className={styles.imageSection}>
+          <Image
+            src="/javed.png"
+            alt="Javed Saifi"
+            width={300}
+            height={200}
+            className={styles.profilePic}
+          />
+        </div>
         <div className={styles.textSection}>
           <h1 className={styles.title}>JAVED SAIFI</h1>
           <p className={styles.subtitle}>Innovative MERN Stack Developer</p>
@@ -30,15 +39,7 @@ const Header: React.FC = () => (
           </a>
           </div>
         </div>
-        <div className={styles.imageSection}>
-          <Image
-            src="/javed.png"
-            alt="Javed Saifi"
-            width={300}
-            height={200}
-            className={styles.profilePic}
-          />
-        </div>
+        
       </div>
     </header>
   </div>
