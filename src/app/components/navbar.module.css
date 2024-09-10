@@ -105,6 +105,11 @@
 
 /* Responsive Design */
 @media (max-width: 468px) {
+  .nav {
+    height: 80px; /* Increase height of the navbar */
+    padding: 20px 20px; /* Adjust padding to fit new height */
+  }
+
   .menu-toggle {
     display: block; /* Show menu toggle on screens below 468px */
     position: absolute;
@@ -129,7 +134,7 @@
     right: 0;
     background: #0d0d0d; /* Background color to match navbar */
     width: 250px; /* Adjust width as needed */
-    height: 100%; /* Full height */
+    height: calc(100% - 80px); /* Adjust height to fit below the navbar */
     transform: translateX(100%); /* Hide off-screen by default */
     transition: transform 0.3s ease; /* Smooth transition for sliding effect */
     display: flex;
@@ -149,4 +154,3 @@
     margin: 8px 0; /* Reduced spacing between items */
   }
 }
-
