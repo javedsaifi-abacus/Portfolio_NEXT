@@ -27,123 +27,36 @@ body {
   margin-top: 60px; /* Margin-top equal to or greater than the navbar height */
 }
 
+/* Global Styles for Sections */
 .section {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #f9f9f9; /* Light background for sections */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  background-color: #f8f9fa; /* Light gray background for simplicity */
+  border-radius: 10px; /* Slightly rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow for minimal depth */
 }
 
-/* Section Title Styles */
+/* Simple and Modern Section Title Styles */
 .section h2 {
-  font-size: 2.5rem; /* Larger font size for prominence */
-  font-weight: bold; /* Bold text for emphasis */
-  color: #004e92; /* Primary text color */
-  margin-bottom: 2rem; /* Space below the title */
-  position: relative; /* Positioning context for pseudo-elements */
-  text-transform: uppercase; /* Uppercase text for emphasis */
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for header color and transform */
+  font-size: 2.5rem; /* Slightly smaller font size */
+  font-weight: 500; /* Normal font weight for a clean look */
+  color: #333; /* Darker gray for readability */
+  margin-bottom: 1.5rem; /* Space below the title */
+  font-family: 'Lato', sans-serif; /* Modern and clean font */
+  letter-spacing: 1px; /* Slight letter spacing */
 }
 
 /* Decorative Line Below Title */
 .section h2::after {
   content: '';
   display: block;
-  width: 80px; /* Width of the decorative line */
-  height: 4px; /* Height of the line */
-  background: linear-gradient(90deg, #0070f3 0%, #00d084 100%); /* Gradient color */
-  margin: 0.5rem auto 0; /* Center align and space above the line */
-  border-radius: 2px; /* Rounded corners for the line */
+  width: 60px; /* Smaller width for simplicity */
+  height: 3px; /* Slightly smaller height */
+  background: #007bff; /* Light blue color for the line */
+  margin: 0.5rem auto; /* Center align and space above */
+  border-radius: 1.5px;
 }
 
-/* Hover Effect */
-.section h2:hover {
-  color: #003d7a; /* Darker color on hover */
-  transform: translateY(-5px); /* Slightly lift header on hover */
-}
-
-.section h2:hover::after {
-  background: linear-gradient(90deg, #00d084 0%, #0070f3 100%); /* Inverted gradient color on hover */
-}
-
-/* Content Item Styles */
-.skillsContainer {
-  display: flex; /* Enable Flexbox */
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  gap: 20px; /* Space between items */
-  justify-content: center; /* Center items horizontally */
-  padding: 40px 20px;
-  background-color: #f4f4f4; /* Light background for the container */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.content-item {
-  background: #ffffff; /* Clean white background */
-  padding: 2rem;
-  border-radius: 12px; /* Smooth rounded corners */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  border: 1px solid #ddd; /* Light border for definition */
-  position: relative; /* Positioning context for pseudo-elements */
-  overflow: hidden; /* Ensure pseudo-elements don’t overflow */
-  display: flex; /* Flexbox for alignment */
-  flex-direction: column; /* Align items vertically */
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
-}
-
-/* Hover Effect */
-.content-item:hover {
-  transform: translateY(-8px); /* Lift the item on hover */
-  background: #f0f0f0; /* Slight background change on hover */
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
-  border-color: #0070f3; /* Border color change on hover */
-}
-
-/* Heading Styles */
-.content-item h3 {
-  font-size: 1.75rem; /* Adjusted font size for balance */
-  margin: 0;
-  color: #333; /* Dark text color for contrast */
-  font-weight: 700; /* Bold text for emphasis */
-  position: relative; /* Ensure positioning for pseudo-elements */
-  padding-bottom: 0.5rem; /* Space below the heading */
-  border-bottom: 3px solid #0070f3; /* Decorative underline */
-}
-
-/* Content Description */
-.content-item p {
-  font-size: 1rem; /* Standard font size for content */
-  color: #666; /* Lighter color for text */
-  margin-top: 0.5rem;
-  line-height: 1.6; /* Improved readability */
-  text-align: center; /* Center align text for consistency */
-}
-
-/* Layout for Multiple Items */
-.content-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
-  gap: 2rem; /* Space between items */
-  margin-top: 2rem;
-  padding: 0 1rem; /* Padding on sides for alignment */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .content-item {
-    padding: 1.5rem; /* Reduced padding on smaller screens */
-    border-radius: 10px; /* Slightly smaller border-radius */
-  }
-
-  .content-item h3 {
-    font-size: 1.5rem; /* Adjusted font size for smaller screens */
-  }
-
-  .content-list {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted column sizing */
-  }
-}
 
 /* Navbar Styles (Assuming you have a basic navbar setup) */
 #navbar {
@@ -259,4 +172,21 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Layout Container */
+.layout-container {
+  display: flex; /* Enables flexbox layout */
+  flex-direction: row; /* Sets direction to row */
+  height: 100%; /* Full viewport height for consistency */
+}
+
+/* Content Container */
+.content-container {
+  flex: 1; /* Allows the content to take the remaining space */
+  padding: 20px; /* Padding for the content area */
+  overflow-y: auto; /* Adds vertical scroll if content overflows */
+  background-color: #ffffff; /* Background color for content */
+  /* border: 10px solid red; */
+  /* height: calc(100vh - 70px); */
 }

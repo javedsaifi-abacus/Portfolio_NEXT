@@ -1,28 +1,32 @@
-import React from "react";
+"use client"; // Mark this file as a Client Component
+
+import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faStar, faBriefcase, faGraduationCap, faTools, faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faStar, faBriefcase, faGraduationCap, faTools, faDownload, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import styles from "./navbar.module.css";
 
 const Navbar: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
     <nav className={styles.nav}>
+      {/* Menu toggle for mobile */}
+      <div className={styles["menu-toggle"]} onClick={toggleMenu}>
+        <FontAwesomeIcon icon={faEllipsisV} className={styles["menu-icon"]} />
+      </div>
+
       {/* Logo on the left linking to the home page */}
       <div className={styles.logo}>
         <Link href="/">
-          <Image
-            src="/logojaved.png"
-            alt="JAVED Logo"
-            width={30}
-            height={30}
-            className={styles["logo-img"]}
-          />
+          <span className={styles["logo-text"]}>J</span>
         </Link>
       </div>
 
-      {/* Navigation items on the right */}
-      <ul className={styles["nav-links"]}>
+      {/* Navigation items */}
+      <ul className={`${styles["nav-links"]} ${menuOpen ? styles["show"] : styles["hide"]}`}>
         <li>
           <Link href="/skills">
             <FontAwesomeIcon icon={faStar} className={styles["nav-icon"]} />
