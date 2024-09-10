@@ -253,6 +253,7 @@
   .header {
     padding: 20px 10px;
     margin: 60px 0;
+    width: 100%; /* Increased width for better fit on smaller screens */
   }
 
   .profilePic {
@@ -289,5 +290,51 @@
 
   .icon{
     width: 15px;
+  }
+}
+
+
+
+@media (max-width: 375px) {
+  .header {
+    padding: 20px 10px;
+    margin: 60px 0;
+    width: 120%; /* Increased width for better fit on smaller screens */
+  }
+
+  .profilePic {
+    width: 90%;
+    max-width: 220px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.7rem;
+  }
+
+  .description {
+    font-size: 0.6rem;
+  }
+
+  .location,
+  .contact {
+    font-size: 0.6rem;
+  }
+
+  .socialIcon {
+    font-size: 0.8rem;
+  }
+
+  .aboutButton {
+    font-size: 0.25rem;
+    padding: 1px 10px;
+    /* margin-right: 20px; */
+  }
+
+  .icon{
+    width: 10px;
   }
 }
