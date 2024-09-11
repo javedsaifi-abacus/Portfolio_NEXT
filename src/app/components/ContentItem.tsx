@@ -9,7 +9,9 @@ interface ContentItemProps {
 
 const ContentItem = ({ title, details }: ContentItemProps) => (
   <div className="content-item">
-    <h3>{title}</h3>
+    <div className="title">
+      <h3>{title}</h3>
+    </div>
     {details && <p>{details}</p>}
   </div>
 );

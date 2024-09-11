@@ -27,12 +27,8 @@ body {
 }
 /* Global Styles for Sections */
 .section {
-  padding: 2.5rem 1.5rem; /* Reduced padding for smaller screens */
   text-align: center;
   margin-top: 60px;
-  background-color: #0c72d8; /* Light blue background */
-  border-radius: 10px; /* Slightly rounded corners */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow for minimal depth */
 }
 
 /* Simple and Modern Section Title Styles */
@@ -59,8 +55,7 @@ body {
 /* Responsive Adjustments */
 @media (max-width: 375px) {
   .section {
-    padding: 2rem 1rem; /* Further reduce padding for very small screens */
-    margin-top: 90px;
+    margin-top: 75px;
   }
 
   .section h2 {

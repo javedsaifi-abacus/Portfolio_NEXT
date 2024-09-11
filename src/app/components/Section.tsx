@@ -6,10 +6,12 @@ interface SectionProps {
   }
   
   const Section = ({ id, title, children }: SectionProps) => (
+    <>
     <section id={id} className="section">
       <h2>{title}</h2>
-      {children}
     </section>
+      {children}
+    </>
   );
   
   export default Section;
