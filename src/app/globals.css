@@ -25,35 +25,53 @@ body {
   color: #333;
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color changes */
 }
-
 /* Global Styles for Sections */
 .section {
-  padding: 4rem 2rem;
+  padding: 2.5rem 1.5rem; /* Reduced padding for smaller screens */
   text-align: center;
-  background-color: #f8f9fa; /* Light gray background for simplicity */
+  margin-top: 60px;
+  background-color: #0c72d8; /* Light blue background */
   border-radius: 10px; /* Slightly rounded corners */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow for minimal depth */
 }
 
 /* Simple and Modern Section Title Styles */
 .section h2 {
-  font-size: 2.5rem; /* Slightly smaller font size */
+  font-size: 2rem; /* Smaller font size for small screens */
   font-weight: 500; /* Normal font weight for a clean look */
   color: #333; /* Darker gray for readability */
-  margin-bottom: 1.5rem; /* Space below the title */
+  margin-bottom: 1rem; /* Space below the title */
   font-family: 'Lato', sans-serif; /* Modern and clean font */
-  letter-spacing: 1px; /* Slight letter spacing */
+  letter-spacing: 0.5px; /* Slightly reduced letter spacing */
 }
 
 /* Decorative Line Below Title */
 .section h2::after {
   content: '';
   display: block;
-  width: 60px; /* Smaller width for simplicity */
-  height: 3px; /* Slightly smaller height */
+  width: 50px; /* Adjust width for smaller screens */
+  height: 2px; /* Slightly smaller height */
   background: #007bff; /* Light blue color for the line */
   margin: 0.5rem auto; /* Center align and space above */
-  border-radius: 1.5px;
+  border-radius: 1px; /* Slight rounding */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 375px) {
+  .section {
+    padding: 2rem 1rem; /* Further reduce padding for very small screens */
+    margin-top: 90px;
+  }
+
+  .section h2 {
+    font-size: 1.6rem; /* Reduce font size for titles on small screens */
+    margin-bottom: 0.8rem; /* Less space below the title */
+  }
+
+  .section h2::after {
+    width: 40px; /* Adjust the decorative line width for smaller screens */
+    height: 1.5px; /* Slightly thinner line */
+  }
 }
 
 
