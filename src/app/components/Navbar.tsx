@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
         <li onClick={closeMenu}>
           <Link href="/skills">
             <FontAwesomeIcon icon={faStar} className={styles["nav-icon"]} />
-            Skills
+            jjjjjjj
           </Link>
         </li>
         <li onClick={closeMenu}>
