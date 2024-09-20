@@ -1,18 +1,28 @@
-// /src/components/ContentItem.tsx
-
 import './ContentItem.css';
 
 interface ContentItemProps {
   title: string;
-  details?: string;
+  details?: string[];
+  link?: string; // Make link optional
+  image?: string; // Add image prop
 }
 
-const ContentItem = ({ title, details }: ContentItemProps) => (
+
+const ContentItem = ({ title, details = [], link, image }: ContentItemProps) => (
   <div className="content-item">
-    <div className="title">
-      <h3>{title}</h3>
+    <div className="content-text">
+      <div className="title">
+        <h3>{title}</h3>
+      </div>
+      {Array.isArray(details) && details.map((detail, index) => (
+        <p key={index}>{detail}</p>
+      ))}
     </div>
-    {details && <p>{details}</p>}
+    {image ? ( // Conditional rendering of the image
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <img src={image} alt={title} className="content-image" />
+      </a>
+    ) : null}
   </div>
 );
 

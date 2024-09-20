@@ -9,11 +9,23 @@ const Experience = () => (
       <div className="content-list">
         <ContentItem 
           title="Software Developer Trainee at Loyalty Partner IT Solutions" 
-          details="Apr 2024 - Present: Developed web applications using Angular and Node.js, built server-side logic and APIs, integrated components, collaborated with senior developers." 
+          details={[
+            <span style={{ fontWeight: 'bold' }}>Apr 2024 - Present:</span>, // Inline styling for duration
+            " Developed web applications using Angular and Node.js.",
+            " Built server-side logic and APIs.",
+            " Integrated components and collaborated with senior developers."
+          ]}
+          link="#" // Add a link if needed
         />
         <ContentItem 
           title="Web Automation Testing Intern at VVnT SeQuor, Noida" 
-          details="Jan 2022 - Jun 2022: Developed automated testing scripts, maintained automation frameworks, analyzed test results, identified and documented defects." 
+          details={[
+            <span style={{ fontWeight: 'bold' }}>Jan 2022 - Jun 2022:</span>, // Inline styling for duration
+            " Developed automated testing scripts.",
+            " Maintained automation frameworks.",
+            " Analyzed test results and identified defects."
+          ]}
+          link="#" // Add a link if needed
         />
       </div>
     </Section>

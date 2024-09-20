@@ -1,23 +1,34 @@
+/* /src/components/ContentItem.css */
+
 /* Main Content Item Container */
 .content-item {
-    padding: 1.2rem; /* Reduced padding for a lighter feel */
-    border: 1px solid #e0e0e0; /* Light grey border for subtle definition */
-    border-radius: 10px; /* Rounded corners for a modern look */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow for a slight depth */
     display: flex; /* Flexbox for layout control */
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the start */
+    align-items: flex-start; /* Align items at the start */
     margin-bottom: 1rem; /* Margin below each content item */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions for interactive effects */
+    padding: 1rem; /* Padding for the item */
+    border: 1px solid #e0e0e0; /* Light grey border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
 }
 
-.content-item:hover {
-    transform: translateY(-2px); /* Subtle hover lift effect */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover */
+/* Title and Details Container */
+.content-text {
+    flex: 1; /* Allow this container to take remaining space */
+    margin-right: 1rem; /* Space between text and image */
+    max-width: 1000px; /* Decrease max width of content */
+}
+
+/* Content Image */
+.content-image {
+    max-width: 400px; /* Set a max width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Slightly rounded corners */
+    object-fit: cover; /* Ensure the image covers the container */
 }
 
 /* Title Background */
-.content-item .title {
+.content-text .title {
     background-color: #f4f4f4; /* Light grey background for title */
     padding: 0.8rem; /* Padding around the title */
     border-radius: 5px; /* Slightly rounded corners for the title */
@@ -25,38 +36,64 @@
 }
 
 /* Heading Inside Content Item */
-.content-item h3 {
-    font-size: 1.4rem; /* Appropriate font size for small screens */
-    margin: 0; /* Remove margin to fit within the title background */
+.content-text h3 {
+    font-size: 1.4rem; /* Appropriate font size */
+    margin: 0; /* Remove margin */
     color: #333; /* Dark color for contrast */
     font-weight: 600; /* Bold font weight for emphasis */
-    text-align: left; /* Align text to the left */
 }
 
 /* Content Description Inside Content Item */
-.content-item p {
+.content-text p {
     background-color: #fafafa; /* Very light grey background for details */
-    padding: 0.8rem; /* Padding around the details */
+    padding: 0.5rem; /* Padding around the details */
     border-radius: 5px; /* Slightly rounded corners for the details */
-    font-size: 0.95rem; /* Slightly smaller font size for readability */
-    color: #666; /* Mid-grey for a softer text look */
-    margin: 0; /* Remove margins */
+    font-size: 0.95rem; /* Font size for readability */
+    color: #666; /* Mid-grey for softer text look */
+    margin: 0.5rem 0; /* Margin above and below */
     line-height: 1.5; /* Comfortable line height */
-    text-align: left; /* Align text to the left */
+}
+
+/* Link Styles */
+.content-text a {
+    color: #007bff; /* Bootstrap primary color */
+    text-decoration: none; /* Remove underline */
+    font-weight: 600; /* Bold font weight for emphasis */
+}
+
+.content-text a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
 }
 
 /* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content-item {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .content-text {
+        margin-right: 0; /* Remove margin on smaller screens */
+        margin-bottom: 1rem; /* Add margin below text when stacked */
+    }
+
+    .content-image {
+        max-width: 100%; /* Full width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
 @media (max-width: 375px) {
     .content-item {
         padding: 0.8rem; /* Reduce padding on very small screens */
         border-radius: 8px; /* Slightly less rounded corners */
     }
 
-    .content-item h3 {
+    .content-text h3 {
         font-size: 1.2rem; /* Adjust font size for smaller screens */
     }
 
-    .content-item p {
+    .content-text p {
         font-size: 0.85rem; /* Adjust font size for smaller screens */
     }
 }
