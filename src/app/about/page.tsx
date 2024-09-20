@@ -12,7 +12,10 @@ const About = () => {
           <ContentItem 
             title="About Me" 
             details={[
-              "I am a passionate web developer with a strong foundation in JavaScript and Angular, creating intuitive and scalable web applications."
+              "✨ Passionate web developer specializing in:",
+              "  - 💻 JavaScript and Angular for web application development.",
+              "  - 🎨 Crafting intuitive and scalable user experiences.",
+              "  - 🚀 Transforming ideas into reality."
             ]}
           />
 
@@ -20,7 +23,10 @@ const About = () => {
           <ContentItem 
             title="Interests & Hobbies" 
             details={[
-              "Outside coding, I explore tech trends, contribute to open-source, and enjoy chess and self-improvement books."
+              "🌍 When I'm not coding, I enjoy:",
+              "  - ✈️ Traveling to explore new landscapes and cultures.",
+              "  - 🚴‍♂️ Biking through scenic trails to connect with nature.",
+              "  - 🌟 These adventures fuel my creativity and keep my spirit vibrant."
             ]}
           />
 
@@ -28,7 +34,11 @@ const About = () => {
           <ContentItem 
             title="Core Values" 
             details={[
-              "I prioritize collaboration, innovation, and user experience, committed to writing clean code and ethical practices."
+              "🤝 I prioritize:",
+              "  - 🤗 Collaboration and teamwork in projects.",
+              "  - 💡 Innovation and creativity in problem-solving.",
+              "  - 🧑‍🤝‍🧑 User-centered design for impactful solutions.",
+              "  - ✍️ Writing clean, ethical code."
             ]}
           />
         </div>
