@@ -5,16 +5,18 @@ import ContentItem from "../components/ContentItem";
 
 const Projects = () => (
   <>
-    <Section id="projects" title="🌟 Featured Projects">
+    <Section id="projects" title="Featured Projects">
       <div className="content-list">
         {/* Portfolio Website Project */}
         <ContentItem 
           title="Portfolio Website" 
           details={[
-            "Explore my personal portfolio, a vibrant showcase of my work and skills, built with Next.js.",
-            "🚀 Modern Design",
-            "🖥️ Fast and Optimized",
-            "📁 Showcase of my projects and accomplishments."
+            "<strong>Technologies Used:</strong> Next.js, Tailwind CSS, HTML, JavaScript",
+            "• This is my personal portfolio, showcasing my skills and projects built with Next.js.",
+            "• The site is optimized for performance and responsiveness, making it accessible across various devices.",
+            "• Utilizes dynamic routing to showcase projects efficiently.",
+            "• Features contact forms for direct communication and inquiries.",
+            "• It serves as a comprehensive showcase of my work and accomplishments."
           ]} 
           link="https://javedportfolio.vercel.app/" 
           image="port.png" // Replace with actual image path
@@ -24,11 +26,12 @@ const Projects = () => (
         <ContentItem 
           title="Contact Form" 
           details={[
-            "A fully functional contact form built with Angular, Node.js, and Express.",
-            "✅ Task Management (Add, edit, and delete tasks)",
-            "📅 Date and Time Integration",
-            "🛠️ Robust Backend",
-            "🎨 Attractive UI using Angular and Bootstrap."
+            "<strong>Technologies Used:</strong> Angular, Node.js, Express, Nodemailer, TypeScript",
+            "• A simple contact form that utilizes Nodemailer for sending emails.",
+            "• The backend is deployed on Vercel, while the frontend is hosted on Netlify, seamlessly integrated.",
+            "• SMTP settings are generated from Gmail using an app password for secure email sending.",
+            "• The recipient email can be dynamically set, allowing flexibility in communication.",
+            "• This project demonstrates efficient handling of form submissions and email notifications."
           ]} 
           link="https://backend-repo-gamma.vercel.app" 
           image="contactform.png" // Replace with actual image path
@@ -38,9 +41,10 @@ const Projects = () => (
         <ContentItem 
           title="Dedicated Sales Force Automation (SFA) Project at SimollBath" 
           details={[
-            "Developed a sales force automation system for SimollBath using Angular, Node.js, Express.js, and XLSX.",
-            "The system streamlines sales operations and provides advanced reporting features.",
-            "It allows for managing sales data, tracking field sales activities, and generating reports in Excel format."
+            "<strong>Technologies Used:</strong> Angular, Node.js, Express.js, XLSX",
+            "• Developed a sales force automation system for SimollBath that enhances sales operations and provides advanced reporting capabilities.",
+            "• The system enables effective management of sales data and tracking of field sales activities.",
+            "• It also features Excel report generation for data analysis, streamlining workflow and improving productivity."
           ]} 
           link="http://simoll.theloyaltypartner.co.in/" 
           image="simoll.png" // Replace with actual image path
@@ -50,9 +54,10 @@ const Projects = () => (
         <ContentItem 
           title="Dedicated Sales Force Automation (SFA) Project at Marmo Solutions" 
           details={[
-            "Created a comprehensive sales force automation tool for Marmo Solutions, leveraging Angular, Node.js, Express.js, and XLSX.",
-            "The project focuses on automating sales workflows, tracking sales teams, and generating detailed reports.",
-            "It also integrates with Excel for data analysis and reporting."
+            "<strong>Technologies Used:</strong> Angular, Node.js, Express.js, XLSX",
+            "• Created a comprehensive sales force automation tool for Marmo Solutions, leveraging the power of Angular and Node.js.",
+            "• This project focuses on automating sales workflows and tracking team performance effectively.",
+            "• It integrates with Excel for detailed reporting, facilitating data analysis and decision-making."
           ]} 
           link="http://marmo.theloyaltypartner.co.in/" 
           image="Marmo.jpg" // Replace with actual image path
