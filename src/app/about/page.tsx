@@ -11,25 +11,25 @@ const About = () => {
           {/* About Me Section */}
           <ContentItem 
             title="About Me" 
-            details=
+            details={[
               "I am a passionate web developer with a strong foundation in JavaScript and Angular, creating intuitive and scalable web applications."
-            
+            ]}
           />
 
           {/* Interests & Hobbies Section */}
           <ContentItem 
             title="Interests & Hobbies" 
-            details=
+            details={[
               "Outside coding, I explore tech trends, contribute to open-source, and enjoy chess and self-improvement books."
-            
+            ]}
           />
 
           {/* Core Values Section */}
           <ContentItem 
             title="Core Values" 
-            details=
+            details={[
               "I prioritize collaboration, innovation, and user experience, committed to writing clean code and ethical practices."
-             
+            ]}
           />
         </div>
       </Section>
