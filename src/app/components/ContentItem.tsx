@@ -8,7 +8,7 @@ interface ContentItemProps {
 }
 
 const ContentItem = ({ title, details = [], link, image }: ContentItemProps) => (
-  <div className={`content-item ${image ? 'with-image' : ''}`}>
+  <div className="content-item">
     <div className="content-text">
       <div className="title">
         <h3>{title}</h3>
