@@ -8,20 +8,22 @@ const Experience = () => (
     <Section id="experience" title="Work Experience">
       <div className="content-list">
         <ContentItem 
-          title="Software Developer Trainee at Loyalty Partner IT Solutions" 
+          title="Loyalty Partner IT Solutions Pvt Ltd, Faridabad" 
           details={[
-            "Apr 2024 - Present: Developed web applications using Angular and Node.js.",
-            "Built server-side logic and APIs.",
-            "Integrated components and collaborated with senior developers."
+            "<strong>Software Developer Trainee</strong> (April 2024 - Present)",
+            "• Developed web applications utilizing Angular and Node.js, enhancing functionality and user experience.",
+            "• Built server-side logic and APIs, ensuring robust data handling and performance.",
+            "• Integrated components and collaborated with senior developers to deliver high-quality software solutions."
           ]}
           link="#" // Add a link if needed
         />
         <ContentItem 
-          title="Web Automation Testing Intern at VVnT SeQuor, Noida" 
+          title="VVnT SeQuor, Noida" 
           details={[
-            "Jan 2022 - Jun 2022: Developed automated testing scripts.",
-            "Maintained automation frameworks.",
-            "Analyzed test results and identified defects."
+            "<strong>Web Automation Testing Intern</strong> (January 2022 - June 2022)",
+            "• Developed automated testing scripts to improve testing efficiency and coverage.",
+            "• Maintained automation frameworks, ensuring reliability and adaptability to changes.",
+            "• Analyzed test results, identified defects, and collaborated with the development team to resolve issues."
           ]}
           link="#" // Add a link if needed
         />
