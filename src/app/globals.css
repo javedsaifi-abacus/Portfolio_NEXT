@@ -202,3 +202,27 @@ body {
   /* border: 10px solid red; */
   /* height: calc(100vh - 70px); */
 }
+
+/* Responsive Adjustments for Small Screens */
+@media (max-width: 375px) {
+  #contact .container {
+    padding: 15px; /* Further reduced padding */
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  #contact .title {
+    font-size: 1.8rem; /* Reduced font size for titles on small screens */
+  }
+
+  #contact input,
+  #contact textarea {
+    padding: 10px; /* Further reduced padding */
+    font-size: 14px; /* Consistent font size */
+  }
+
+  #contact button {
+    padding: 10px; /* Further reduced padding */
+    font-size: 14px; /* Consistent font size */
+  }
+}
