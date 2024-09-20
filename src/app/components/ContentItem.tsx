@@ -2,11 +2,10 @@ import './ContentItem.css';
 
 interface ContentItemProps {
   title: string;
-  details?: string[];
+  details?: string[]; // Details will contain HTML strings
   link?: string; // Make link optional
   image?: string; // Add image prop
 }
-
 
 const ContentItem = ({ title, details = [], link, image }: ContentItemProps) => (
   <div className="content-item">
@@ -15,7 +14,7 @@ const ContentItem = ({ title, details = [], link, image }: ContentItemProps) => 
         <h3>{title}</h3>
       </div>
       {Array.isArray(details) && details.map((detail, index) => (
-        <p key={index}>{detail}</p>
+        <p key={index} dangerouslySetInnerHTML={{ __html: detail }} />
       ))}
     </div>
     {image ? ( // Conditional rendering of the image

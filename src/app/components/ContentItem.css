@@ -1,15 +1,19 @@
-/* /src/components/ContentItem.css */
-
 /* Main Content Item Container */
 .content-item {
     display: flex; /* Flexbox for layout control */
     align-items: flex-start; /* Align items at the start */
     margin-bottom: 1rem; /* Margin below each content item */
     padding: 1rem; /* Padding for the item */
-    border: 1px solid #e0e0e0; /* Light grey border */
+    border: 1px solid #d1d1d1; /* Light grey border */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    background-color: #ffffff; /* White background for contrast */
+}
+
+.content-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
 }
 
 /* Title and Details Container */
@@ -23,45 +27,53 @@
 .content-image {
     max-width: 400px; /* Set a max width for the image */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Slightly rounded corners */
+    border-radius: 8px; /* Slightly more rounded corners */
     object-fit: cover; /* Ensure the image covers the container */
+    transition: transform 0.3s ease; /* Smooth image transition */
+}
+
+.content-image:hover {
+    transform: scale(1.05); /* Scale effect on hover */
 }
 
 /* Title Background */
 .content-text .title {
-    background-color: #f4f4f4; /* Light grey background for title */
+    background-color: #6c63ff; /* Attractive purple color */
     padding: 0.8rem; /* Padding around the title */
     border-radius: 5px; /* Slightly rounded corners for the title */
     margin-bottom: 0.5rem; /* Margin below the title */
+    color: #ffffff; /* White text color for contrast */
 }
 
 /* Heading Inside Content Item */
 .content-text h3 {
-    font-size: 1.4rem; /* Appropriate font size */
+    font-size: 1.6rem; /* Slightly larger font size */
     margin: 0; /* Remove margin */
     color: #333; /* Dark color for contrast */
-    font-weight: 600; /* Bold font weight for emphasis */
+    font-weight: 700; /* Bold font weight for emphasis */
 }
 
 /* Content Description Inside Content Item */
 .content-text p {
-    background-color: #fafafa; /* Very light grey background for details */
+    background-color: #f2f2f2; /* Light grey background for details */
     padding: 0.5rem; /* Padding around the details */
     border-radius: 5px; /* Slightly rounded corners for the details */
-    font-size: 0.95rem; /* Font size for readability */
-    color: #666; /* Mid-grey for softer text look */
+    font-size: 1rem; /* Font size for readability */
+    color: #555; /* Mid-grey for softer text look */
     margin: 0.5rem 0; /* Margin above and below */
     line-height: 1.5; /* Comfortable line height */
 }
 
 /* Link Styles */
 .content-text a {
-    color: #007bff; /* Bootstrap primary color */
+    color: #6c63ff; /* Matching link color */
     text-decoration: none; /* Remove underline */
     font-weight: 600; /* Bold font weight for emphasis */
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .content-text a:hover {
+    color: #4a47a3; /* Darker shade on hover */
     text-decoration: underline; /* Underline on hover for better UX */
 }
 
@@ -90,10 +102,10 @@
     }
 
     .content-text h3 {
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        font-size: 1.4rem; /* Adjust font size for smaller screens */
     }
 
     .content-text p {
-        font-size: 0.85rem; /* Adjust font size for smaller screens */
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
     }
 }
