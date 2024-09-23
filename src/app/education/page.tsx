@@ -8,7 +8,7 @@ const Education = () => (
     <Section id="education" title="Educational Background">
       <div className="content-list">
         <ContentItem 
-          title="Bachelor of Technology in Computer Science & Engineering" 
+          title="Bachelor of Technology (Computer Science & Engineering)" 
           details={[
             "YMCA University of Science and Technology (2018 - 2022)",
             "• CGPA: 7.4",

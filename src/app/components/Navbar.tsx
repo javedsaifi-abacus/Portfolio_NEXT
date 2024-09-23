@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
           </Link>
         </li>
         <li onClick={closeMenu}>
-          <a href="/resume.pdf" download className={styles["cv-link"]}>
+          <a href="/JavedResume.pdf" download className={styles["cv-link"]}>
             <FontAwesomeIcon icon={faDownload} className={styles["nav-icon"]} />
             Download CV
           </a>
