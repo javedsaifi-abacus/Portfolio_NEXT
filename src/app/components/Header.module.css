@@ -45,21 +45,35 @@
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
 /* Subtitle Styles */
 .subtitle {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #666;
+  font-family: 'Poppins', sans-serif; /* Updated font */
+  font-size: 2rem; /* Increased font size for emphasis */
+  font-weight: 600; /* Bold weight */
+  color: transparent; /* For gradient text */
+  background: linear-gradient(90deg, #FF6F61, #FFD93D); /* Sunset Vibes gradient */
+  -webkit-background-clip: text; /* Apply gradient to text */
+  background-clip: text; /* Clip background for effect */
   margin-bottom: 10px;
   font-style: italic;
   text-transform: uppercase;
-  font-family: cursive;
   position: relative;
   overflow: hidden;
   display: inline-block;
   white-space: nowrap;
   letter-spacing: 0.1em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
 }
+
+.subtitle:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  color: #FF6F61; /* Change color on hover */
+}
+
+
 
 /* Typing Animation */
 .subtitle::before {

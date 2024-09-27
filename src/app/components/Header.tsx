@@ -1,12 +1,12 @@
 import Image from "next/image";
 import styles from "../components/Header.module.css";
-import { FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaInfoCircle, FaHandshake  } from 'react-icons/fa'; // Font Awesome icons
+import { FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaInfoCircle, FaHandshake } from 'react-icons/fa'; // Font Awesome icons
 
 const Header: React.FC = () => (
   <div className={styles.wrapper}>
     <header className={styles.header}>
       <div className={styles.content}>
-      <div className={styles.imageSection}>
+        <div className={styles.imageSection}>
           <Image
             src="/javed.png"
             alt="Javed Saifi"
@@ -17,9 +17,9 @@ const Header: React.FC = () => (
         </div>
         <div className={styles.textSection}>
           <h1 className={styles.title}>JAVED SAIFI</h1>
-          <p className={styles.subtitle}>Innovative MERN Stack Developer</p>
+          <p className={styles.subtitle}>Node.js | Angular | Next.js</p>
           <p className={styles.description}>
-            Passionate about creating dynamic and efficient web applications. Leveraging cutting-edge technologies to build scalable solutions and drive digital transformation.
+            I engineer high-performance web applications leveraging Node.js and cutting-edge frameworks such as Angular and Next.js, dedicated to delivering exceptional user experiences and scalable solutions.
           </p>
           <p className={styles.location}>Based in Faridabad, Haryana, India</p>
           <p className={styles.contact}>+91-8527019853 | saifijaved616@gmail.com</p>
@@ -30,16 +30,15 @@ const Header: React.FC = () => (
             <a href="https://github.com/javed-tlp" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><FaGithub /></a>
             <a href="https://www.instagram.com/javed_saifi_0786/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><FaInstagram /></a>
             <a href="/about" className={styles.aboutButton}>
-            <FaInfoCircle className={styles.icon} /> {/* Updated About button icon */}
-            <span>About Me</span>
-          </a>
-          <a href="/contact" className={styles.aboutButton}>
-            <FaHandshake  className={styles.icon} /> {/* Updated About button icon */}
-            <span>Connect Me</span>
-          </a>
+              <FaInfoCircle className={styles.icon} /> {/* Updated About button icon */}
+              <span>About Me</span>
+            </a>
+            <a href="/contact" className={styles.aboutButton}>
+              <FaHandshake className={styles.icon} /> {/* Updated About button icon */}
+              <span>Connect Me</span>
+            </a>
           </div>
         </div>
-        
       </div>
     </header>
   </div>
