@@ -1,5 +1,3 @@
-// /src/pages/Projects.tsx
-
 import Section from "../components/Section";
 import ContentItem from "../components/ContentItem";
 
@@ -19,7 +17,7 @@ const Projects = () => (
             "• It serves as a comprehensive showcase of my work and accomplishments."
           ]} 
           link="https://javedportfolio.vercel.app/" 
-          image="port.png" // Replace with actual image path
+          image="port.png"
         />
 
         {/* Contact Form Project */}
@@ -34,10 +32,10 @@ const Projects = () => (
             "• This project demonstrates efficient handling of form submissions and email notifications."
           ]} 
           link="https://backend-repo-gamma.vercel.app" 
-          image="contactform.png" // Replace with actual image path
+          image="contactform.png"
         />
 
-        {/* Dedicated Sales Force Automation (SFA) Project at SimollBath */}
+        {/* SFA Project at SimollBath */}
         <ContentItem 
           title="Dedicated Sales Force Automation (SFA) Project at SimollBath" 
           details={[
@@ -47,10 +45,10 @@ const Projects = () => (
             "• It also features Excel report generation for data analysis, streamlining workflow and improving productivity."
           ]} 
           link="http://simoll.theloyaltypartner.co.in/" 
-          image="simoll.png" // Replace with actual image path
+          image="simoll.png"
         />
 
-        {/* Dedicated Sales Force Automation (SFA) Project at Marmo Solutions */}
+        {/* SFA Project at Marmo Solutions */}
         <ContentItem 
           title="Dedicated Sales Force Automation (SFA) Project at Marmo Solutions" 
           details={[
@@ -60,7 +58,21 @@ const Projects = () => (
             "• It integrates with Excel for detailed reporting, facilitating data analysis and decision-making."
           ]} 
           link="http://marmo.theloyaltypartner.co.in/" 
-          image="Marmo.jpg" // Replace with actual image path
+          image="Marmo.jpg"
+        />
+
+        {/* Idemitsu Engage App Project */}
+        <ContentItem 
+          title="Idemitsu Engage App – Sales Force Automation (SFA)" 
+          details={[
+            "<strong>Technologies Used:</strong> Angular, Node.js, Express.js, MongoDB",
+            "• Developed a robust SFA module for Idemitsu, a leading Japanese lubricant company.",
+            "• Integrated features for automated order assignment, daily issue resolution workflows, and DMS (Dealer Management System) order processing.",
+            "• Implemented multiple administrative provisions to streamline daily operations and field force management.",
+            "• The system significantly reduced manual errors, improved turnaround time, and enhanced operational transparency."
+          ]}
+          link="http://idemitsu.basiq360.com/" // Replace with actual if exists
+          image="idemitsu.jpg" // Replace with actual image path
         />
       </div>
     </Section>
