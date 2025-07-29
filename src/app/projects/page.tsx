@@ -58,6 +58,7 @@ const Projects = () => (
             "• It integrates with Excel for detailed reporting, facilitating data analysis and decision-making."
           ]} 
           link="http://marmo.theloyaltypartner.co.in/" 
+          
           image="Marmo.jpg"
         />
 
